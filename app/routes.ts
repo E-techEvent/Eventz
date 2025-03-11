@@ -7,4 +7,7 @@ export default [
     { path: "/dashboard/user/:userId", file: "routes/dashboards/users/$userId.jsx" },
     { path: "/dashboard/admin/:userId", file: "routes/dashboards/admin/$userId.jsx" },
     { path: "/dashboard/organiser/:userId", file: "routes/dashboards/organizers/$userId.jsx"},
+    { path: "/auth/signup", file: "routes/auth/sign-up.jsx" },
+    { path: "/auth/signin", file: "routes/auth/sign-in.jsx" },
+
 ] satisfies RouteConfig;
