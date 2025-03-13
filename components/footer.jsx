@@ -4,7 +4,7 @@ import { MdPhone, MdEmail } from 'react-icons/md';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#5C4B99] text-white py-4">
+        <footer className="bg-[#5C4B99]  primary-color text-white py-4">
             <div className=" container mx-auto px-4 flex flex-col ">
                 <div className='w-full'>
                     <h6 className=' text-center text-5xl mb-5'>Eventz</h6>
