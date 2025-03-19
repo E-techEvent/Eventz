@@ -64,8 +64,10 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">TESTIMONIALS</h2>
+    <div className="w-full max-w-5xl mx-auto font-textFont py-12 px-4">
+      <h2 className="text-3xl font-bold text-center mb-8 font-headerFont">
+        TESTIMONIALS
+      </h2>
 
       <div className="relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -95,7 +97,7 @@ const Testimonials = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                index === currentIndex ? 'bg-blue-600' : 'bg-gray-300'
+                index === currentIndex ? 'bg-primary' : 'bg-gray-300'
               }`}
               aria-label={`Go to testimonial group ${index + 1}`}
             />

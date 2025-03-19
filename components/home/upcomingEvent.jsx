@@ -112,11 +112,11 @@ const buttonVariants = {
 
 const UpcomingEvents = () => {
   return (
-    <div>
+    <div className="font-textFont">
       {/* Header*/}
-      <div className="bg-indigo-900 py-8 mb-5">
+      <div className="bg-secondary py-8 mb-5">
         <div className="container mx-auto px-4">
-          <h1 className="text-center text-white text-2xl mb-6">
+          <h1 className="text-center text-white text-2xl mb-6 font-headerFont">
             Explore some of our Event
           </h1>
 
@@ -180,7 +180,7 @@ const UpcomingEvents = () => {
               </div>
             </div>
 
-            <button className="bg-indigo-600 text-white px-5 flex items-center justify-center">
+            <button className="bg-primary text-white px-5 flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -204,7 +204,7 @@ const UpcomingEvents = () => {
       <div className="max-w-5xl mx-auto p-6">
         {/* Header Section */}
         <motion.h2
-          className="text-3xl font-bold text-center mb-5"
+          className="text-3xl font-bold text-center mb-5 font-headerFont"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.1 }}
@@ -226,7 +226,7 @@ const UpcomingEvents = () => {
               transition={{ delay: index * 0.2 }}
             >
               {/* Date Section */}
-              <div className="w-full md:w-20 flex flex-row md:flex-col items-center justify-between md:justify-center bg-blue-900 text-white p-3">
+              <div className="w-full md:w-20 flex flex-row md:flex-col items-center justify-between md:justify-center bg-primary text-white p-3">
                 <div className="flex items-center md:flex-col md:items-center">
                   <span className="text-lg font-bold mr-1 md:mr-0">
                     {event.month}
@@ -248,12 +248,14 @@ const UpcomingEvents = () => {
                   <span className="text-xs font-semibold bg-gray-200 px-2 py-1 rounded">
                     {event.type}
                   </span>
-                  <h3 className="text-lg font-semibold mt-2">{event.title}</h3>
+                  <h3 className="text-lg font-semibold mt-2 font-headerFont">
+                    {event.title}
+                  </h3>
                   <p className="text-sm text-gray-600">{event.description}</p>
 
                   <div className="mt-4 flex space-x-4">
                     <a href="/tickets">
-                      <button className="bg-blue-900 text-white px-4 py-2 text-sm rounded-md hover:bg-blue-700 cursor-pointer">
+                      <button className="bg-primary text-white px-4 py-2 text-sm rounded-md hover:bg-primary/70 cursor-pointer">
                         Get Tickets
                       </button>
                     </a>
@@ -285,7 +287,7 @@ const UpcomingEvents = () => {
             variants={buttonVariants}
           >
             <a href="/events">
-              <button className="border border-blue-900 text-gray-700 px-6 py-2 rounded-md hover:bg-blue-900 hover:text-white cursor-pointer">
+              <button className="border border-primarytext-gray-700 px-6 py-2 rounded-md hover:bg-primary hover:text-white cursor-pointer">
                 View All Events
               </button>
             </a>

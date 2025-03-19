@@ -23,11 +23,11 @@ const whyChooseUsData = [
 
 const AboutUs = () => {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-6 py-12 font-textFont">
       {/* About Us Section */}
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 className="text-3xl font-bold">ABOUT US</h2>
+          <h2 className="text-3xl font-bold font-headerFont">ABOUT US</h2>
           <p className="font-semibold mt-4">
             At vero eos et accusamus et iusto odio dignissimos
           </p>
@@ -54,7 +54,9 @@ const AboutUs = () => {
 
       {/* Why Choose Us Section */}
       <div className="my-16 text-center">
-        <h2 className="text-3xl font-bold mb-8">WHY CHOOSE US</h2>
+        <h2 className="text-3xl font-bold mb-8 font-headerFont">
+          WHY CHOOSE US
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {whyChooseUsData.map((card, index) => (

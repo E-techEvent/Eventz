@@ -25,8 +25,10 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4">
-      <h2 className="text-3xl font-bold text-center mb-12">CONTACT US</h2>
+    <div className="max-w-4xl mx-auto py-12 px-4 font-textFont">
+      <h2 className="text-3xl font-bold text-center mb-12 font-headerFont">
+        CONTACT US
+      </h2>
 
       <form onSubmit={handleSubmit} className="mb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -40,7 +42,7 @@ const ContactUs = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-indigo-500"
+              className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary"
               required
             />
           </div>
@@ -55,7 +57,7 @@ const ContactUs = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-indigo-500"
+              className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary"
               required
             />
           </div>
@@ -71,7 +73,7 @@ const ContactUs = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-indigo-500"
+            className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary"
             required
           />
         </div>
@@ -86,14 +88,14 @@ const ContactUs = () => {
             value={formData.message}
             onChange={handleChange}
             rows="4"
-            className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-indigo-500"
+            className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-secondary"
             required
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-indigo-500 text-white py-4 font-medium text-lg hover:bg-indigo-600 transition-colors"
+          className="w-full bg-primary text-white py-4 font-medium text-lg hover:bg-secondary transition-colors"
         >
           Send
         </button>
@@ -115,7 +117,7 @@ const ContactUs = () => {
               />
             </svg>
           </div>
-          <h3 className="font-bold text-lg mb-2">ADDRESS</h3>
+          <h3 className="font-bold text-lg mb-2 font-headerFont">ADDRESS</h3>
           <p className="text-gray-700">Remote, Worldwide</p>
         </div>
 
@@ -131,7 +133,7 @@ const ContactUs = () => {
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
             </svg>
           </div>
-          <h3 className="font-bold text-lg mb-2">EMAIL US</h3>
+          <h3 className="font-bold text-lg mb-2 font-headerFont">EMAIL US</h3>
           <a
             href="mailto:example@etech.com"
             className="text-gray-700 hover:text-indigo-600"
@@ -151,7 +153,9 @@ const ContactUs = () => {
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
           </div>
-          <h3 className="font-bold text-lg mb-2">PHONE NUMBER</h3>
+          <h3 className="font-bold text-lg mb-2 font-headerFont">
+            PHONE NUMBER
+          </h3>
           <a
             href="tel:+233500000000"
             className="text-gray-700 hover:text-indigo-600"
