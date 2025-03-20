@@ -42,7 +42,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden font-headerFont">
       {/* Main image */}
       <div
         className="w-full h-full"
@@ -81,7 +81,7 @@ const Hero = () => {
             <div
               className={`transition-all duration-300 ${
                 currentSlide === index
-                  ? 'w-8 h-1 bg-blue-500'
+                  ? 'w-8 h-1 bg-secondary'
                   : 'w-4 h-1 bg-white'
               }`}
             ></div>
@@ -90,10 +90,10 @@ const Hero = () => {
       </div>
 
       <div className="absolute bottom-16 left-16 z-20 text-white flex space-x-6">
-        <button className="bg-blue-800 hover:bg-blue-900 text-white font-semibold py-4 px-8 rounded-full shadow-lg transition duration-300">
+        <button className="bg-primary hover:bg-primary/70 text-white font-semibold py-4 px-8 rounded-full shadow-lg transition duration-300">
           Explore Events
         </button>
-        <button className="bg-blue-800 hover:bg-blue-900 text-white font-semibold py-4 px-8 rounded-full shadow-lg transition duration-300">
+        <button className="bg-primary hover:bg-primary/70 text-white font-semibold py-4 px-8 rounded-full shadow-lg transition duration-300">
           Search
         </button>
       </div>

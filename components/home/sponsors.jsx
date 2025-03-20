@@ -36,9 +36,11 @@ const Sponsors = () => {
   ];
 
   return (
-    <section className="py-12 px-4">
+    <section className="py-12 px-4 font-textFont">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-10">OUR SPONSORS</h2>
+        <h2 className="text-3xl font-bold text-center mb-10 font-headerFont">
+          OUR SPONSORS
+        </h2>
 
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
           {sponsors.map((sponsor) => (
