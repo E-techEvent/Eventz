@@ -8,6 +8,6 @@ export function meta() {
   export default function Contact() {
     return (
       <div className="hero">
-        <h1>contact page</h1>
+        <h1>contact</h1>
       </div>);
   }
