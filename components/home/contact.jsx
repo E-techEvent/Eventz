@@ -106,7 +106,7 @@ const ContactUs = () => {
           <div className="w-12 h-12 flex items-center justify-center mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 text-indigo-900"
+              className="h-10 w-10 text-primary"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -125,7 +125,7 @@ const ContactUs = () => {
           <div className="w-12 h-12 flex items-center justify-center mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 text-indigo-900"
+              className="h-10 w-10 text-primary"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -136,7 +136,7 @@ const ContactUs = () => {
           <h3 className="font-bold text-lg mb-2 font-headerFont">EMAIL US</h3>
           <a
             href="mailto:example@etech.com"
-            className="text-gray-700 hover:text-indigo-600"
+            className="text-gray-700 hover:text-primary"
           >
             example@etech.com
           </a>
@@ -146,7 +146,7 @@ const ContactUs = () => {
           <div className="w-12 h-12 flex items-center justify-center mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 text-indigo-900"
+              className="h-10 w-10 text-primary"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -158,7 +158,7 @@ const ContactUs = () => {
           </h3>
           <a
             href="tel:+233500000000"
-            className="text-gray-700 hover:text-indigo-600"
+            className="text-gray-700 hover:text-primary"
           >
             (+233) 500 000 000
           </a>
