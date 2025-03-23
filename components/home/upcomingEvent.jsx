@@ -260,7 +260,7 @@ const UpcomingEvents = () => {
                       </button>
                     </a>
 
-                    <a href="/eventDetial">
+                    <a href={`/events/${event.id}`}>
                       <button className="text-gray-700 text-sm underline hover:text-gray-900 cursor-pointer">
                         View Details
                       </button>
