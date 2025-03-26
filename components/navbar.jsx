@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,9 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="text-2xl font-bold cursor-pointer">E-Tech</div>
+          <Link to="/" className="text-2xl font-bold cursor-pointer">
+            E-Tech
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">

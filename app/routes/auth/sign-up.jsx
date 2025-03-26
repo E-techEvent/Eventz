@@ -266,7 +266,7 @@ const SignupForm = () => {
                 </div>
 
                 <div className="text-center">
-                  <a href="/login" className="text-blue-900 font-medium">
+                  <a href="/auth/signin" className="text-blue-900 font-medium">
                     Login
                   </a>
                 </div>
