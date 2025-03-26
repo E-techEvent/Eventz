@@ -3,7 +3,7 @@ import { FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const SpeakerCard = ({ name, title, imageUrl }) => {
   return (
-    <div className="bg-secondary rounded-lg shadow-lg p-10 text-center w-[20%] relative overflow-hidden">
+    <div className="bg-secondary rounded-lg shadow-lg p-10 text-center w-[90%] md:w-[30%] relative overflow-hidden">
       {/* Speaker image */}
       <img
         src={imageUrl}
@@ -12,8 +12,8 @@ const SpeakerCard = ({ name, title, imageUrl }) => {
       />
 
       {/* Speaker name and title */}
-      <h3 className="text-lg text-white font-semibold">{name}</h3>
-      <p className="text-sm text-white mb-4">{title}</p>
+      <h3 className="text-lg text-white font-TextFont font-semibold">{name}</h3>
+      <p className="text-sm text-white font-textFont mb-4">{title}</p>
 
       {/* Social media icons with blue background */}
       <div className="flex justify-center gap-4">

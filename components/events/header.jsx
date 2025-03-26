@@ -136,8 +136,9 @@ const Header = () => {
         bgcolor: "#6a5acd",
         paddingTop: "50px",
         width: "100%", // Purple background matching the image
-        minHeight: "100vh",
+        minHeight: "70vh",
       }}
+
     >
       <Paper
         elevation={3}
@@ -212,22 +213,12 @@ const Header = () => {
         </Grid>
       </Paper>
 
-      <Button
-        variant="contained"
-        sx={{
-          bgcolor: "#1a237e",
-          color: "white",
-          "&:hover": {
-            bgcolor: "#0d47a1",
-          },
-          fontSize: "16px",
-          px: 4,
-          py: 1,
-        }}
+      <button
+        className="bg-primary text-white px-10 py-5 rounded cursor-pointer hover:bg-primary-hover transition duration-300 ease-in-out"
         onClick={handleBuyTicket}
       >
         Buy Ticket
-      </Button>
+      </button>
     </Box>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Eventcard from "components/events/eventcard";
 import Header from "components/events/header";
 import TrendingEvents from "components/events/trendingevents";
+import Img from "../../assets/images/event-img.jpg";
 
 const EventsPage = () => {
   const events = [
@@ -13,6 +14,7 @@ const EventsPage = () => {
       price: "$500.00",
       pass: "Standard Pass",
       category: "FINANCE",
+      image: Img
     },
     {
       id: 2,
@@ -22,6 +24,7 @@ const EventsPage = () => {
       price: "$500.00",
       pass: "Access Elite Pass",
       category: "FINANCE",
+      image: Img
     },
     {
       id: 3,
@@ -31,6 +34,7 @@ const EventsPage = () => {
       price: "$500.00",
       pass: "Standard Pass",
       category: "TECH",
+      image: Img
     },
     {
       id: 4,
@@ -40,6 +44,7 @@ const EventsPage = () => {
       price: "$500.00",
       pass: "Standard Pass",
       category: "TECH",
+      image: Img
     },
     {
       id: 5,
@@ -49,6 +54,7 @@ const EventsPage = () => {
       price: "$500.00",
       pass: "Access Elite Pass",
       category: "FINANCE",
+      image: Img
     },
     {
       id: 6,
@@ -58,6 +64,7 @@ const EventsPage = () => {
       price: "$500.00",
       pass: "Standard Pass",
       category: "TECH",
+      image: Img
     },
   ];
   const [activeFilter, setActiveFilter] = useState("ALL");

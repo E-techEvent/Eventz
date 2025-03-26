@@ -1,8 +1,13 @@
-import React, { useState } from "react";
-import "./trendingevents.css"; // Import the CSS file for animations
+import React, { useState, useEffect } from "react";
+import { FaHeart } from "react-icons/fa";
+import "./trendingevents.css"; 
+import Img from "../../assets/images/event-img.jpg";
+import {Link} from "react-router";
 
 const TrendingEvents = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [likedEvents, setLikedEvents] = useState({});
+  const [visibleEvents, setVisibleEvents] = useState(4);
 
   // Sample events data
   const events = [
@@ -12,7 +17,7 @@ const TrendingEvents = () => {
       tagline: "IS HERE",
       cta: "STAY TUNED",
       subtext: "for more updates",
-      image: "/api/placeholder/400/320",
+      image: Img,
     },
     {
       id: 2,
@@ -20,7 +25,7 @@ const TrendingEvents = () => {
       tagline: "IS HERE",
       cta: "STAY TUNED",
       subtext: "for more updates",
-      image: "/api/placeholder/400/320",
+      image: Img,
     },
     {
       id: 3,
@@ -28,7 +33,7 @@ const TrendingEvents = () => {
       tagline: "IS HERE",
       cta: "STAY TUNED",
       subtext: "for more updates",
-      image: "/api/placeholder/400/320",
+      image: Img,
     },
     {
       id: 4,
@@ -36,7 +41,7 @@ const TrendingEvents = () => {
       tagline: "IS HERE",
       cta: "STAY TUNED",
       subtext: "for more updates",
-      image: "/api/placeholder/400/320",
+      image: Img,
     },
     {
       id: 5,
@@ -44,7 +49,7 @@ const TrendingEvents = () => {
       tagline: "IS HERE",
       cta: "STAY TUNED",
       subtext: "for more updates",
-      image: "/api/placeholder/400/320",
+      image: Img,
     },
     {
       id: 6,
@@ -52,11 +57,33 @@ const TrendingEvents = () => {
       tagline: "IS HERE",
       cta: "STAY TUNED",
       subtext: "for more updates",
-      image: "/api/placeholder/400/320",
+      image: Img,
     },
   ];
 
-  const visibleEvents = 3;
+  // Update visible events based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1280) {
+        setVisibleEvents(4);
+      } else if (window.innerWidth >= 1024) {
+        setVisibleEvents(3);
+      } else if (window.innerWidth >= 640) {
+        setVisibleEvents(2);
+      } else {
+        setVisibleEvents(1);
+      }
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -70,10 +97,17 @@ const TrendingEvents = () => {
     );
   };
 
+  const toggleLike = (eventId) => {
+    setLikedEvents(prev => ({
+      ...prev,
+      [eventId]: !prev[eventId]
+    }));
+  };
+
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white p-6 rounded shadow mb-20 mt-10">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-medium text-gray-700">
+    <div className="w-full max-w-[90%] rounded shadow mb-20 mt-10">
+      <div className="flex justify-between items-center mb-6 ">
+        <h2 className="text-2xl md:text-4xl font-medium font-headerFont text-gray-700">
           Top trending events
         </h2>
         <div className="flex space-x-2">
@@ -96,51 +130,52 @@ const TrendingEvents = () => {
 
       <div className="relative overflow-hidden">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex h-[350px] transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${currentIndex * (100 / visibleEvents)}%)`,
           }}
         >
           {events.map((event) => (
-            <div
+            <Link to={`/events/${event.id}`}
               key={event.id}
-              className="w-64 flex-shrink-0 px-2"
+              className="w-[200px] h-[300px] flex-shrink-0 px-2"
               style={{ flex: `0 0 ${100 / visibleEvents}%` }}
             >
-              <div className="relative rounded-lg overflow-hidden bg-purple-900 text-white">
+              <div className="relative rounded-lg overflow-hidden bg-primary font-textFont text-white">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="opacity-20 w-full h-48 object-cover"
+                  className="w-full h-48 object-cover"
                 />
-                <div className="absolute inset-0 p-4 flex flex-col justify-between">
+                <div className="h-full inset-0 p-4 flex flex-col justify-between">
                   <div className="flex justify-end">
-                    <button className="text-white bg-transparent hover:text-blue-200">
-                      <svg
-                        className="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                      </svg>
+                    <button 
+                      onClick={() => toggleLike(event.id)}
+                      className="text-white bg-transparent hover:text-blue-200"
+                    >
+                      <FaHeart 
+                        className={`w-6 h-6 transition-colors duration-300 ${
+                          likedEvents[event.id] ? 'text-red-500 fill-red-500' : 'text-white'
+                        }`}
+                      />
                     </button>
                   </div>
                   <div className="flex flex-col items-center text-center">
                     <div className="flex items-center mb-1">
                       <div className="w-2 h-2 bg-yellow-400 rounded-full mr-1"></div>
-                      <span className="text-xs text-white">{event.title}</span>
+                      <span className="text-xs text-white font-headerFont font-bold">{event.title}</span>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{event.tagline}</h3>
-                    <div className="bg-gray-600 bg-opacity-70 text-white text-xs px-4 py-1 rounded-full">
+                    <h3 className="text-xl font-bold font-textFont mb-2">{event.tagline}</h3>
+                    <div className="bg-gray-600 font-textFont bg-opacity-70 text-white text-xs px-4 py-1 rounded-full">
                       {event.cta}{" "}
-                      <span className="text-xs opacity-70">
+                      <span className="text-xs opacity-70 font-textFont">
                         {event.subtext}
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

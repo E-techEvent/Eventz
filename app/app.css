@@ -7,7 +7,11 @@
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-textFont: 'Lora', serif;
   --font-headerFont: 'Poppins', sans-serif;
-  --color-primary: #000080;
+  --color-primary: rgba(0, 0, 128, 1);
+  --color-primary-hover: rgba(0, 0, 128, 0.5);
+  --color-secondary: rgba(102, 102, 179, 1);
+  --color-secondary-hover: rgba(102, 102, 179, 0.5);
+
   --color-secondary: #6666b3;
 }
 
