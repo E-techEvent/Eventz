@@ -4,7 +4,7 @@ export default [
     index("routes/home.jsx"),
     { path: "/events", file: "routes/events.jsx" },
     { path: "/contact", file: "routes/contact.jsx" },
-    { path: "/events/:id", file: "routes/events/$id.jsx" },
+    { path: "/event/:id", file: "routes/events/$id.jsx" },
     { path: "/dashboard/user/:userId", file: "routes/dashboards/users/$userId.jsx" },
     { path: "/dashboard/admin/:userId", file: "routes/dashboards/admin/$userId.jsx" },
     { path: "/dashboard/organiser/:userId", file: "routes/dashboards/organizers/$userId.jsx"},
