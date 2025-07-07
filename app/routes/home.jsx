@@ -8,7 +8,7 @@ import Sponsors from 'components/home/sponsors';
 
 export function meta() {
   return [
-    { title: 'Events' },
+    { title: 'Event' },
     { name: 'description', content: 'The hub for all your favorite events' },
   ];
 }

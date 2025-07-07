@@ -19,37 +19,31 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
-            <a
-              href="/"
-              className="hover:text-gray-200  transition duration-300"
-            >
+            <Link to="/" className="hover:text-gray-200 transition duration-300">
+             
               Home
-            </a>
-            <a
-              href="/events"
-              className="hover:text-gray-200 transition duration-300"
-            >
+            </Link>
+            <Link to="/events" className="hover:text-gray-200 transition duration-300">
               Events
-            </a>
-            <a
-              href="/contact"
-              className="hover:text-gray-200 transition duration-300"
-            >
+            </Link>
+            <Link to="/contact" className="hover:text-gray-200 transition duration-300">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-6">
-            <a
-              href="/auth/signin"
+            <Link
+              to="/auth/signin"
               className="hover:text-gray-200 transition duration-300"
             >
               Login
-            </a>
+            </Link>
+            <Link to="/dashboard/admin">
             <button className="bg-white text-primary rounded-full px-6 py-2 font-bold hover:bg-gray-100 transition duration-300 cursor-pointer">
-              Tickets
+              Dashboard
             </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

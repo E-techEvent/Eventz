@@ -1,32 +1,32 @@
 import React from 'react';
 import SpeakerCard from './speakercard';
-import Headshot from "../../assets/images/headshot.jpg";
-
-const SpeakerSection = () => {
-  const speakers = [
+const SpeakerSection = ({ speakers }) => { // Accept speakers as prop
+  // Mock speakers if not provided, or for standalone testing
+  const defaultSpeakers = [
     {
       name: 'Richlove Taylor',
       title: 'CO-FOUNDER & CEO, AMGS',
-      imageUrl: Headshot, // Replace with actual image path
+      imageUrl: '/images/speaker.jpg', // Use the public speaker image
     },
     {
-        name: 'Richlove Taylor',
-        title: 'CO-FOUNDER & CEO, AMGS',
-        imageUrl: Headshot, // Replace with actual image path
+        name: 'Jane Smith',
+        title: 'Lead Developer, InnovateX',
+        imageUrl: '/images/speaker.jpg', // Use the public speaker image
       },
     {
-        name: 'Richlove Taylor',
-        title: 'CO-FOUNDER & CEO, AMGS',
-        imageUrl: Headshot, // Replace with actual image path
+        name: 'David Lee',
+        title: 'Marketing Director, Global Corp',
+        imageUrl: '/images/speaker.jpg', // Use the public speaker image
       },
-    // Add more speakers here if needed
   ];
 
+  const speakersToDisplay = speakers && speakers.length > 0 ? speakers : defaultSpeakers;
+
   return (
-    <section className="flex w-[80%] flex-col  item-center py-12 font-headerFont  text-center">
-      <h2 className="text-3xl font-bold mb-8">SPEAKERS</h2>
-      <div className="flex flex-col md:flex-row  item-center gap-4 justify-between">
-        {speakers.map((speaker, index) => (
+    <section className="py-8 sm:py-12 font-headerFont text-center">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">SPEAKERS</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+        {speakersToDisplay.map((speaker, index) => (
           <SpeakerCard
             key={index}
             name={speaker.name}

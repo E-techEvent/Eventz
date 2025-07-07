@@ -39,35 +39,35 @@ const CountdownTimer = () => {
   };
 
   return (
-    <div className="bg-indigo-400 mt-10 p-6 rounded-lg shadow-lg w-full max-w-md mx-auto text-center">
-      <h2 className="text-white text-xl font-semibold mb-4">EVENT COUNTDOWN</h2>
-      <div className="flex justify-between gap-2">
-        <div className="flex flex-col items-center">
-          <div className="bg-blue-900 text-white font-bold text-3xl p-4 rounded w-20 h-20 flex items-center justify-center">
+    <div className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] mt-6 p-6 rounded-lg shadow-xl text-center font-headerFont">
+      <h2 className="text-white text-2xl font-bold mb-6">EVENT COUNTDOWN</h2>
+      <div className="flex justify-around items-center gap-3 sm:gap-4">
+        <div className="flex flex-col items-center flex-1 min-w-0">
+          <div className="bg-white text-gray-900 font-extrabold text-base sm:text-xl md:text-2xl lg:text-3xl p-3 sm:p-4 rounded-lg w-full aspect-square flex items-center justify-center">
             {formatNumber(days)}
           </div>
-          <p className="text-white text-xs mt-2">DAYS</p>
+          <p className="text-gray-900 text-xs sm:text-sm mt-2 uppercase tracking-wider">DAYS</p>
         </div>
         
-        <div className="flex flex-col items-center">
-          <div className="bg-blue-900 text-white font-bold text-3xl p-4 rounded w-20 h-20 flex items-center justify-center">
+        <div className="flex flex-col items-center flex-1 min-w-0">
+          <div className="bg-white text-gray-900 font-extrabold text-base sm:text-xl md:text-2xl lg:text-3xl p-3 sm:p-4 rounded-lg w-full aspect-square flex items-center justify-center">
             {formatNumber(hours)}
           </div>
-          <p className="text-white text-xs mt-2">HOURS</p>
+          <p className="text-gray-900 text-xs sm:text-sm mt-2 uppercase tracking-wider">HRS</p>
         </div>
         
-        <div className="flex flex-col items-center">
-          <div className="bg-blue-900 text-white font-bold text-3xl p-4 rounded w-20 h-20 flex items-center justify-center">
+        <div className="flex flex-col items-center flex-1 min-w-0">
+          <div className="bg-white text-gray-900 font-extrabold text-base sm:text-xl md:text-2xl lg:text-3xl p-3 sm:p-4 rounded-lg w-full aspect-square flex items-center justify-center">
             {formatNumber(minutes)}
           </div>
-          <p className="text-white text-xs mt-2">MINUTES</p>
+          <p className="text-gray-900 text-xs sm:text-sm mt-2 uppercase tracking-wider">MIN</p>
         </div>
         
-        <div className="flex flex-col items-center">
-          <div className="bg-blue-900 text-white font-bold text-3xl p-4 rounded w-20 h-20 flex items-center justify-center">
+        <div className="flex flex-col items-center flex-1 min-w-0">
+          <div className="bg-white text-gray-900 font-extrabold text-base sm:text-xl md:text-2xl lg:text-3xl p-3 sm:p-4 rounded-lg w-full aspect-square flex items-center justify-center">
             {formatNumber(seconds)}
           </div>
-          <p className="text-white text-xs mt-2">SECONDS</p>
+          <p className="text-gray-900 text-xs sm:text-sm mt-2 uppercase tracking-wider">SEC</p>
         </div>
       </div>
     </div>
